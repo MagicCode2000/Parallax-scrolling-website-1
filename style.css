@@ -1,0 +1,80 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+.background{
+    min-height: 100vh;
+    background-image: url(background.jpg);
+    background-size: 1600px;
+    background-position: 50% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.background h1{
+    display: inline;
+    font-size: 50px;
+    color: white;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    font-size: 20px;
+    padding: 20px 60px;
+    color: white;
+    position: absolute;
+    width: 92%;
+}
+header nav span{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+header nav span a{
+    color: white;
+    text-decoration:none;
+    position: relative;
+}
+@keyframes beforeAnimation {
+    0%{
+        width: 0%;
+        transform: translateX(-50%);
+    }
+    100%{
+        width: 100%;
+        transform: translateX(0%);
+    }
+}
+header nav span a::before{
+    content: "";
+    background-color: white;
+    width: 100%;
+    height: 2.4px;
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+    display: none;
+    animation: beforeAnimation .5s;
+}
+header nav span a:hover::before{
+    display: unset;
+}
+.About{
+    background-color: #280f47;
+    color: white;
+    padding: 40px 120px;
+    font-size: 16px;
+}
+.About h1{
+    padding:40px 0px;
+    font-size: 30px;
+}
+.About p{
+    padding: 18px 0px;
+}
